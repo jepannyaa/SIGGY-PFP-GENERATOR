@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Siggy PFP Generator</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/png" href="assets/images/favicon.png">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🎨 Siggy PFP Generator</h1>
+            <p class="subtitle">Buat Profile Picture Unikmu!</p>
+        </header>
+
+        <main>
+            <div class="generator-wrapper">
+                <!-- Preview Area -->
+                <div class="preview-section">
+                    <div class="canvas-container">
+                        <canvas id="pfpCanvas" width="500" height="500"></canvas>
+                    </div>
+                    <div class="action-buttons">
+                        <button id="randomizeBtn" class="btn btn-secondary">
+                            🎲 Randomize
+                        </button>
+                        <button id="downloadBtn" class="btn btn-primary">
+                            📥 Download PNG
+                        </button>
+                        <button id="resetBtn" class="btn btn-danger">
+                            🔄 Reset
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Controls Area -->
+                <div class="controls-section">
+                    <!-- Base Color -->
+                    <div class="control-group">
+                        <label for="baseColor">🎨 Base Warna Tubuh</label>
+                        <input type="color" id="baseColor" value="#FFD700">
+                        <div class="color-presets" id="baseColorPresets"></div>
+                    </div>
+
+                    <!-- Outfit -->
+                    <div class="control-group">
+                        <label for="outfit">👕 Outfit</label>
+                        <select id="outfit">
+                            <option value="none">Tidak Ada</option>
+                            <option value="outfit-1">Casual</option>
+                            <option value="outfit-2">Formal</option>
+                            <option value="outfit-3">Sporty</option>
+                            <option value="outfit-4">Fantasy</option>
+                        </select>
+                    </div>
+
+                    <!-- Background -->
+                    <div class="control-group">
+                        <label for="background">🌄 Background</label>
+                        <select id="background">
+                            <option value="solid">Warna Solid</option>
+                            <option value="gradient">Gradient</option>
+                            <option value="bg-1">Pattern 1</option>
+                            <option value="bg-2">Pattern 2</option>
+                            <option value="bg-3">Pattern 3</option>
+                        </select>
+                        <input type="color" id="bgColor" value="#4A90D9" class="mt-2">
+                    </div>
+
+                    <!-- Logo -->
+                    <div class="control-group">
+                        <label for="logo">🏷️ Logo</label>
+                        <select id="logo">
+                            <option value="none">Tidak Ada</option>
+                            <option value="logo-1">Logo 1</option>
+                            <option value="logo-2">Logo 2</option>
+                            <option value="logo-3">Logo 3</option>
+                        </select>
+                        <input type="text" id="logoText" placeholder="Teks Logo (opsional)" class="mt-2">
+                    </div>
+
+                    <!-- Accessories -->
+                    <div class="control-group">
+                        <label for="accessories">👓 Accessories</label>
+                        <select id="accessories">
+                            <option value="none">Tidak Ada</option>
+                            <option value="acc-1">Kacamata</option>
+                            <option value="acc-2">Topi</option>
+                            <option value="acc-3">Headphone</option>
+                            <option value="acc-4">Kalung</option>
+                        </select>
+                    </div>
+
+                    <!-- Eyes -->
+                    <div class="control-group">
+                        <label for="eyes">👁️ Mata</label>
+                        <select id="eyes">
+                            <option value="eye-1">Style 1</option>
+                            <option value="eye-2">Style 2</option>
+                            <option value="eye-3">Style 3</option>
+                            <option value="eye-4">Style 4</option>
+                        </select>
+                        <input type="color" id="eyeColor" value="#000000" class="mt-2">
+                    </div>
+
+                    <!-- Nose -->
+                    <div class="control-group">
+                        <label for="nose">👃 Hidung</label>
+                        <select id="nose">
+                            <option value="nose-1">Style 1</option>
+                            <option value="nose-2">Style 2</option>
+                            <option value="nose-3">Style 3</option>
+                        </select>
+                    </div>
+
+                    <!-- Additional Options -->
+                    <div class="control-group">
+                        <label>⚙️ Opsi Tambahan</label>
+                        <div class="checkbox-group">
+                            <label>
+                                <input type="checkbox" id="showShadow" checked>
+                                Shadow
+                            </label>
+                            <label>
+                                <input type="checkbox" id="showOutline" checked>
+                                Outline
+                            </label>
+                            <label>
+                                <input type="checkbox" id="mirrorMode">
+                                Mirror Mode
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <p>&copy; 2024 Siggy PFP Generator. Made with ❤️</p>
+            <div class="social-links">
+                <a href="https://github.com/yourusername/siggy-pfp-generator" target="_blank">GitHub</a>
+                <a href="#" target="_blank">Discord</a>
+                <a href="#" target="_blank">Twitter</a>
+            </div>
+        </footer>
+    </div>
+
+    <script src="js/utils.js"></script>
+    <script src="js/generator.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
